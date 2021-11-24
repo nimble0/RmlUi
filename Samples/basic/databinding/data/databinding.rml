@@ -287,6 +287,9 @@ select selectbox option.disabled {
 	color: #666;
 	background-color: #ccc;
 }
+option {
+	display: block;
+}
 </style>
 </head>
 
@@ -379,6 +382,7 @@ select selectbox option.disabled {
 		<h2>Subject</h2>
 		<div>
 			<select id="select" name="subject" data-value="selected_subject">
+				<option style="display: none;">hidden</option>
                 <option data-for="s : subjects" data-value="it_index" data-class-disabled="it_index == 0" data-attrif-disabled="it_index == 0">{{s}}</option>
             </select>
 			<br/>
