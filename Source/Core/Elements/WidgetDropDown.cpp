@@ -437,8 +437,7 @@ void WidgetDropDown::OnChildAdd(Element* element)
 	if (element->GetParentNode() != selection_element || element->HasAttribute("data-for") || element->GetTagName() != "option")
 		return;
 
-	// Force to block display. Register a click handler so we can be notified of selection.
-	element->SetProperty(PropertyId::Display, Property(Style::Display::Block));
+	// Register a click handler so we can be notified of selection.
 	element->SetProperty(PropertyId::Clip, Property(Style::Clip::Type::Auto));
 	element->AddEventListener(EventId::Click, this);
 
