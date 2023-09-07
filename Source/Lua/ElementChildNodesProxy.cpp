@@ -68,11 +68,10 @@ int ElementChildNodesProxy__pairs(lua_State* L)
 
 int ElementChildNodesProxy__len(lua_State* L)
 {
-	ElementChildNodesProxy* obj = LuaType<ElementChildNodesProxy>::check(L, 1);
-	RMLUI_CHECK_OBJ(obj);
-	lua_pushinteger(L, obj->owner->GetNumChildren());
-	;
-	return 1;
+    ElementChildNodesProxy* obj = LuaType<ElementChildNodesProxy>::check(L, 1);
+    RMLUI_CHECK_OBJ(obj);
+    lua_pushinteger(L, obj->owner->GetNumChildren(true));
+    return 1;
 }
 
 RegType<ElementChildNodesProxy> ElementChildNodesProxyMethods[] = {
