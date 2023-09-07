@@ -69,7 +69,7 @@ int ElementChildNodesProxy__len(lua_State* L)
 {
     ElementChildNodesProxy* obj = LuaType<ElementChildNodesProxy>::check(L,1);
     RMLUI_CHECK_OBJ(obj);
-    lua_pushinteger(L, obj->owner->GetNumChildren());;
+    lua_pushinteger(L, obj->owner->GetNumChildren(true));
     return 1;
 }
 
